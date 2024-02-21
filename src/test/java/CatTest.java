@@ -9,7 +9,7 @@ import static org.mockito.Mockito.when;
 public class CatTest {
 
     @Test
-    public void testGetSound_ReturnsMeow() {
+    public void testGetSoundReturnsMeow() {
         Predator predatorMock = mock(Predator.class);
         Cat cat = new Cat(predatorMock);
         String sound = cat.getSound();
@@ -18,7 +18,7 @@ public class CatTest {
     }
 
     @Test
-    public void testGetFood_DelegatesToPredator() throws Exception {
+    public void testGetFoodDelegatesToPredator() throws Exception {
         Predator predatorMock = mock(Predator.class);
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         when(predatorMock.eatMeat()).thenReturn(expectedFood);
